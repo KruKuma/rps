@@ -15,10 +15,10 @@
     <main>
         <h1>Rock, Paper and Scissor!</h1>
         <table>
-            <tr>
-                <td><button type="button" id="rockButton"><img src="img/rock.png"></button></td>
-                <td><button type="button" id="paperButton"><img src="img/paper.png"></button></td>
-                <td><button type="button" id="scissorButton"><img src="img/scissor.png"></button></td>
+            <tr class="choices">
+                <td><button type="button" class="choices" id="rockButton"><img src="img/rock.png" alt="Rock image"></button></td>
+                <td><button type="button" class="choices" id="paperButton"><img src="img/paper.png" alt="Paper image"></button></td>
+                <td><button type="button" class="choices" id="scissorButton"><img src="img/scissor.png" alt="Scissor image"></button></td>
             </tr>
             <tr>
                 <td>
@@ -28,8 +28,8 @@
                 </td>
                 <td>
                     <h2>Score</h2>
-                    <p>User Score is mow: </p>
-                    <p>Computer Score is now:</p>
+                    <p>User Score is now: <span id="user-score">0</span></p>
+                    <p>Computer Score is now: <span id="computer-score">0</span></p>
                 </td>
             </tr>
         </table>
