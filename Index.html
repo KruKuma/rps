@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/main.css">
-    <script src="js/app.js" charset="utf-8"></script>
     <title>RPS</title>
 </head>
 <body>
@@ -17,15 +16,15 @@
         <h1>Rock, Paper and Scissor!</h1>
         <table>
             <tr class="choices">
-                <td><button type="button" class="choices" id="rock-button"><img src="img/rock.png" alt="Rock image"></button></td>
-                <td><button type="button" class="choices" id="paper-button"><img src="img/paper.png" alt="Paper image"></button></td>
-                <td><button type="button" class="choices" id="scissor-button"><img src="img/scissor.png" alt="Scissor image"></button></td>
+                <td><button type="button" class="choices" id="rock"><img src="img/rock.png" alt="Rock image"></button></td>
+                <td><button type="button" class="choices" id="paper"><img src="img/paper.png" alt="Paper image"></button></td>
+                <td><button type="button" class="choices" id="scissor"><img src="img/scissor.png" alt="Scissor image"></button></td>
             </tr>
             <tr>
                 <td>
-                    <h2>Results</h2>
-                    <p><strong>You:</strong></p>
-                    <p><strong>Computer:</strong></p>
+                    <h2>Results <span id="result"></span></h2>
+                    <p><strong>You: <span id="user-choice"></span></strong></p>
+                    <p><strong>Computer: <span id="computer-choice"></span></strong></p>
                 </td>
                 <td>
                     <h2>Score</h2>
@@ -38,5 +37,6 @@
     <footer>
         <p><small>All right reserved. &copy;Naphatsakorn Khotsombat</small></p>
     </footer>
+    <script src="js/app.js" charset="utf-8"></script>
 </body>
 </html>
