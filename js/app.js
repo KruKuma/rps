@@ -1,13 +1,13 @@
-var userScore = 0;
-var computerScore = 0;
-const userScore_span = document.getElementById["user-score"];
-const computerScore_span = document.getElementById["computer-score"];
-const result = document.getElementById["result"];
-const user_choice = document.getElementById["user-choice"];
-const computer_choice = document.getElementById["computer-choice"];
-const rock_button = document.getElementById["rock"];
-const paper_button = document.getElementById["paper"];
-const scissor_button = document.getElementById["scissor"];
+let userScore = 0;
+let computerScore = 0;
+const userScore_span = document.getElementById("user-score");
+const computerScore_span = document.getElementById("computer-score");
+const result = document.getElementById("result");
+const user_choice = document.getElementById("user-choice");
+const computer_choice = document.getElementById("computer-choice");
+const rock_button = document.getElementById("rock");
+const paper_button = document.getElementById("paper");
+const scissor_button = document.getElementById("scissors");
 
 function getCompterChoices() {
     const choices = ['r', 'p', 's'];
@@ -56,24 +56,23 @@ function game(userChoices) {
     }
 }
 
-game("r");
-
-/*
 function main() {
     rock_button.addEventListener('click', function() {
+        console.log("click on rock")
         game("r");
     })
     
     paper_button.addEventListener('click', function() {
+        console.log("click on paper")
         game("p");
     })
     
     scissor_button.addEventListener('click', function() {
+        console.log("click on scissors")
         game("s");
     })
 }
 
-
 main();
 
-*/
+
