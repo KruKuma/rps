@@ -8,7 +8,7 @@ header {
     padding: 20px;
 }
 
-.choices:hover {
+.choice:hover {
     cursor: pointer;
     background: red;
 }
