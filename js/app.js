@@ -10,47 +10,58 @@ const paper_button = document.getElementById("paper");
 const scissor_button = document.getElementById("scissors");
 
 function getCompterChoices() {
-    const choices = ['r', 'p', 's'];
+    const choices = ['Rock', 'Paper', 'Scissors'];
     const randonNum = Math.floor(Math.random() * 3);
 
     return choices[randonNum];
 }
 
-function win(userChoices, computerChoices) {
+function win(userChoice, computerChoice) {
     userScore++;
     userScore_span.innerHTML = userScore;
     computerScore_span.innerHTML = computerScore;
     result.innerHTML = "Win!";
-    user_choice.innerHTML = userChoices;
-    computer_choice.innerHTML = computerChoices;
-    console.log(userChoices + computerChoices)
+    user_choice.innerHTML = userChoice;
+    computer_choice.innerHTML = computerChoice;
+    console.log(userChoice + computerChoice)
 }
 
-function lose(userChoices, computerChoices) {
+function lose(userChoice, computerChoice) {
     computerScore++;
+    userScore_span.innerHTML = userScore;
+    computerScore_span.innerHTML = computerScore;
+    result.innerHTML = "Lose!";
+    user_choice.innerHTML = userChoice;
+    computer_choice.innerHTML = computerChoice;
+    console.log(userChoice + computerChoice)
 }
 
-function draw(userChoices, computerChoices) {
-
+function draw(userChoice, computerChoice) {
+    userScore_span.innerHTML = userScore;
+    computerScore_span.innerHTML = computerScore;
+    result.innerHTML = "Draw!";
+    user_choice.innerHTML = userChoice;
+    computer_choice.innerHTML = computerChoice;
+    console.log(userChoice + computerChoice)
 }
 
 function game(userChoices) {
     const computerChoices = getCompterChoices();
 
     switch(userChoices + computerChoices) {
-        case "rs":
-        case "pr":
-        case "sp":
+        case "RockScissors":
+        case "PaperRock":
+        case "ScissorsPaper":
             win(userChoices, computerChoices);
             break;
-        case "rp":
-        case "ps":
-        case "sr":
+        case "RockPaper":
+        case "PaperScissors":
+        case "ScissorsRock":
             lose(userChoices, computerChoices);
             break;
-        case "rr":
-        case "pp":
-        case "ss":
+        case "RockRock":
+        case "PaperPaper":
+        case "ScissorsScissors":
             draw(userChoices, computerChoices);
             break;
     }
@@ -58,18 +69,15 @@ function game(userChoices) {
 
 function main() {
     rock_button.addEventListener('click', function() {
-        console.log("click on rock")
-        game("r");
+        game("Rock");
     })
     
     paper_button.addEventListener('click', function() {
-        console.log("click on paper")
-        game("p");
+        game("Paper");
     })
     
     scissor_button.addEventListener('click', function() {
-        console.log("click on scissors")
-        game("s");
+        game("Scissors");
     })
 }
 
