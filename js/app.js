@@ -20,7 +20,7 @@ function win(userChoice, computerChoice) {
     userScore++;
     userScore_span.innerHTML = userScore;
     computerScore_span.innerHTML = computerScore;
-    result.innerHTML = "Win!";
+    result.innerHTML = "You Win!";
     user_choice.innerHTML = userChoice;
     computer_choice.innerHTML = computerChoice;
     console.log(userChoice + computerChoice)
@@ -30,7 +30,7 @@ function lose(userChoice, computerChoice) {
     computerScore++;
     userScore_span.innerHTML = userScore;
     computerScore_span.innerHTML = computerScore;
-    result.innerHTML = "Lose!";
+    result.innerHTML = "You Lose!";
     user_choice.innerHTML = userChoice;
     computer_choice.innerHTML = computerChoice;
     console.log(userChoice + computerChoice)
@@ -39,7 +39,7 @@ function lose(userChoice, computerChoice) {
 function draw(userChoice, computerChoice) {
     userScore_span.innerHTML = userScore;
     computerScore_span.innerHTML = computerScore;
-    result.innerHTML = "Draw!";
+    result.innerHTML = "It's a Draw!";
     user_choice.innerHTML = userChoice;
     computer_choice.innerHTML = computerChoice;
     console.log(userChoice + computerChoice)
